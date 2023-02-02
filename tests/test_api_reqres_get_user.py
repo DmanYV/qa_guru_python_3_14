@@ -36,16 +36,3 @@ def test_get_users_schema():
     response = requests.get('https://reqres.in/api/users/2')
     assert response.status_code == 200
     assert S(single_user_schema) == response.json()
-
-
-def test_123():
-    response = requests.get('https://reqres.in/api/users?page=2')
-    for first_name in response.json()['data']:
-        print(first_name["first_name"])
-    write_name = first_name["first_name"]
-    file = open("perser.txt", 'w')
-    file.write(write_name)
-    file.close()
-
-
-

@@ -1,5 +1,3 @@
-import logging
-
 import requests
 from pytest_voluptuous import S
 from schemas.user import users_list_schema
